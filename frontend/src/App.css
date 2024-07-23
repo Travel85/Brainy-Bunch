@@ -1,0 +1,14 @@
+.logoBrand{
+ 
+    text-align: center;
+}
+
+.loginButtonWP{
+    width: 200px;
+    height: 50px;
+    background-color: blue;
+    color: yellowgreen;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+}
