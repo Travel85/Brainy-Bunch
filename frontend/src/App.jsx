@@ -3,23 +3,31 @@ import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/500.css";
 import "@fontsource/roboto/700.css";
 
+//custom components imports
+import { theme } from "./components/theme/theme";
+
 //MUI imports
-import Container from "@mui/material/Container";
-import Box from "@mui/material/Box";
-import Alert from "@mui/material/Alert";
+import { Box, CssBaseline } from "@mui/material";
+import { ThemeProvider } from "@emotion/react";
 
 //REACT imports
 import { Fragment } from "react";
 
 function App() {
   return (
-    <Container>
-      <h1 align="center">Brainy Bunch!</h1>
-      <h2 align="center">Where Brilliance Blooms!</h2>
-      <Box>
-        <Alert severity="success">Brainy bunch rocks!</Alert>
-      </Box>
-    </Container>
+    <Fragment>
+      <CssBaseline />
+      <ThemeProvider theme={theme}>
+        <Box
+          sx={{
+            backgroundColor: "background.default",
+            height: "100vh",
+            width: "100wh",
+          }}>
+          Hello World!
+        </Box>
+      </ThemeProvider>
+    </Fragment>
   );
 }
 export default App;
