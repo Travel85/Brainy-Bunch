@@ -13,19 +13,17 @@ import { ThemeProvider } from "@emotion/react";
 //REACT imports
 import { Fragment } from "react";
 
+//Components
+import { Login } from "./pages/Login";
+import { Home } from "./pages/Home";
+
 function App() {
   return (
     <Fragment>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        <Box
-          sx={{
-            backgroundColor: "background.default",
-            height: "100vh",
-            width: "100wh",
-          }}>
-          Hello World!
-        </Box>
+        {/*    <Login></Login> */}
+        <Home></Home>
       </ThemeProvider>
     </Fragment>
   );
