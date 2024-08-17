@@ -10,8 +10,13 @@ import AddIcon from "@mui/icons-material/Add";
 import Person2Icon from "@mui/icons-material/Person2";
 import HomeIcon from "@mui/icons-material/Home";
 import { v4 as uuidv4 } from "uuid";
+import CreateCard from "../components/modals/CreateCard";
 
 export function Home() {
+  //used to show CreateCard
+  const [postOpen, setPostOpen] = useState(false);
+  const onModalPosts = () => setPostOpen(!postOpen);
+
   const [value, setValue] = useState(0);
   const [posts, setPosts] = useState([
     {
@@ -116,6 +121,7 @@ export function Home() {
           {/*     Footer */}
           <Grid xs={12} md={12}>
             <Fab
+              onClick={onModalPosts}
               sx={{
                 position: "fixed",
                 bottom: "6%",
@@ -144,6 +150,11 @@ export function Home() {
                 />
               </BottomNavigation>
             </Box>
+            {postOpen ? (
+              <CreateCard
+                postOpen={postOpen}
+                setPostOpen={setPostOpen}></CreateCard>
+            ) : null}
           </Grid>
         </Grid>
       </Box>

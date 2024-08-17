@@ -16,6 +16,7 @@ import Badge from "@mui/material/Badge";
 
 import { useState } from "react";
 import OffercardDetails from "./modals/OffercardDetails";
+import CreateCard from "./modals/CreateCard";
 
 export function Offercard({
   title,
@@ -29,8 +30,11 @@ export function Offercard({
   badgeContent,
 }) {
   const [likes, setLikes] = useState(0);
+
+  //used to show OffercardDtails of Offercard
   const [open, setOpen] = useState(false);
   const onModal = () => setOpen(!open);
+
   return (
     <Paper elevation={1}>
       <Card
