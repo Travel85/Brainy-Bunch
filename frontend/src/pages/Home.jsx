@@ -62,7 +62,8 @@ export function Home() {
       sx={{
         backgroundColor: "background.default",
         minHeight: "150vh",
-      }}>
+      }}
+    >
       <Box>
         <Grid container spacing={2}>
           {/*  Header */}
@@ -74,7 +75,8 @@ export function Home() {
                 justifyContent: "center",
                 alignItems: "center",
                 gap: "5px",
-              }}>
+              }}
+            >
               <img
                 style={{
                   width: "300px",
@@ -84,7 +86,8 @@ export function Home() {
                   borderRadius: "8px",
                   margin: "5px",
                 }}
-                src="/Brainy_Bunch_logo_transparent_black_font_300x50.png"></img>
+                src="/Brainy_Bunch_logo_transparent_black_font_300x50.png"
+              ></img>
             </Box>
             <hr></hr>
           </Grid>
@@ -99,7 +102,8 @@ export function Home() {
               gap: "15px",
               justifyContent: "center",
               alignItems: "center",
-            }}>
+            }}
+          >
             {posts.map((post) => {
               return (
                 <Fragment key={post.id}>
@@ -112,7 +116,8 @@ export function Home() {
                     description={post.description}
                     price={post.price}
                     location={post.location}
-                    contact={post.contact}></Offercard>
+                    contact={post.contact}
+                  ></Offercard>
                 </Fragment>
               );
             })}
@@ -129,7 +134,8 @@ export function Home() {
                 transform: "translateX(-50%)",
               }}
               color="primary"
-              aria-label="add">
+              aria-label="add"
+            >
               <AddIcon />
             </Fab>
             <Box sx={{ position: "fixed", bottom: 0, left: 0, right: 0 }}>
@@ -138,7 +144,8 @@ export function Home() {
                 value={value}
                 onChange={(event, newValue) => {
                   setValue(newValue);
-                }}>
+                }}
+              >
                 <BottomNavigationAction label="Home" icon={<HomeIcon />} />
                 <BottomNavigationAction
                   label="Favorites"
@@ -153,7 +160,8 @@ export function Home() {
             {postOpen ? (
               <CreateCard
                 postOpen={postOpen}
-                setPostOpen={setPostOpen}></CreateCard>
+                setPostOpen={setPostOpen}
+              ></CreateCard>
             ) : null}
           </Grid>
         </Grid>
