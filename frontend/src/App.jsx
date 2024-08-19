@@ -16,14 +16,16 @@ import { Fragment } from "react";
 //Components
 import { Login } from "./pages/Login";
 import { Home } from "./pages/Home";
+import { Register } from "./pages/Register";
 
 function App() {
   return (
     <Fragment>
       <CssBaseline />
       <ThemeProvider theme={theme}>
+        {/* <Register></Register> */}
         <Login></Login>
-        {/* <Home></Home> */}
+        {/* <Home></Home>   */}
       </ThemeProvider>
     </Fragment>
   );
