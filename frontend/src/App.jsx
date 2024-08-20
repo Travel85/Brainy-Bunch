@@ -23,9 +23,9 @@ function App() {
     <Fragment>
       <CssBaseline />
       <ThemeProvider theme={theme}>
-        {/* <Register></Register> */}
-        <Login></Login>
-        {/* <Home></Home>   */}
+        {/*   <Register></Register> */}
+        {/* <Login></Login> */}
+        <Home></Home>
       </ThemeProvider>
     </Fragment>
   );
